@@ -26,7 +26,7 @@ export const VariablesProvider = ({ children }) => {
     };
 
     fetchUser();
-  }, []);
+  }, [token]);
 
   return (
     <VariablesContext.Provider

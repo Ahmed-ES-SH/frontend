@@ -21,15 +21,19 @@ export default function PortfolioSection() {
         setProjects(data.data.data);
       });
       setloading(false);
+      throw response;
     };
     getData(); // جلب البيانات للصفحة الحالية
   }, []);
+
+  console.log(loading);
 
   useEffect(() => {
     const getservices = async () => {
       const response = await instance
         .get("/services")
         .then((data) => setallSkills(data.data.data));
+      throw response;
     };
     getservices();
   }, []);

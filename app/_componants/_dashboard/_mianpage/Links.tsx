@@ -1,19 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Link from "next/link";
 import React from "react";
-import {
-  FaImages,
-  FaMapMarkerAlt,
-  FaMicroblog,
-  FaTextHeight,
-} from "react-icons/fa";
-import { FcAbout, FcCheckmark, FcServices } from "react-icons/fc";
+import { FaImages, FaMapMarkerAlt, FaTextHeight } from "react-icons/fa";
+import { FcAbout, FcCheckmark } from "react-icons/fc";
 import { GoGoal } from "react-icons/go";
-import { GrServices } from "react-icons/gr";
 import { LiaLinkSolid } from "react-icons/lia";
-import { MdOutlineImagesearchRoller } from "react-icons/md"; // استيراد الأيقونة المطلوبة
 import { RiContactsBook3Line } from "react-icons/ri";
-import { RxValue } from "react-icons/rx";
 
 interface props {
   title: string;

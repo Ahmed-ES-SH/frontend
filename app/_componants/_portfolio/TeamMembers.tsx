@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import Img from "../Image";
 import { FaChevronLeft, FaChevronRight, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
-import { CiFacebook, CiLinkedin } from "react-icons/ci";
+import { CiFacebook } from "react-icons/ci";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { instance } from "@/app/Api/axios";
 import { Usevariables } from "@/app/context/VariablesProvider";
@@ -43,7 +43,7 @@ export default function TeamMembers() {
   const { language } = Usevariables();
   const [loading, setLoading] = useState(true);
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
-
+  console.log(loading);
   const fetchTeamMembers = async () => {
     try {
       const response = await instance.get("/team-members");

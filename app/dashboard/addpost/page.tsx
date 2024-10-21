@@ -69,10 +69,13 @@ export default function Addpost() {
     }
 
     try {
+      setloading(true);
       const response = await instance.post("/blog-post-add", formData);
       console.log(response.data);
       setShowPopup(true);
+      setloading(false);
     } catch (error: any) {
+      setloading(false);
       if (error.response && error.response.status === 422) {
         setErrors(error.response.data.errors);
       } else {

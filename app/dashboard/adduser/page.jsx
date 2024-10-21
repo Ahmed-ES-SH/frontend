@@ -107,6 +107,7 @@ export default function Adduser() {
         role: "",
       });
       setImage(null);
+      throw response;
     } catch (error) {
       setloading(false);
       if (error.response && error.response.data && error.response.data.errors) {

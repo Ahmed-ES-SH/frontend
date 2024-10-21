@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -15,7 +16,7 @@ export default function Quations_Answers() {
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
-
+  console.log(loading);
   const [currentimage, setcurrentimage] = useState("");
   useEffect(() => {
     const getData = async () => {

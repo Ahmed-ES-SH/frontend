@@ -1,10 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { instance } from "../Api/axios";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   FaChevronCircleLeft,
   FaChevronCircleRight,
@@ -30,7 +31,6 @@ const PaginatedTable = ({ headers, api, apidelete, keys }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [lastPage, setLastPage] = useState(1);
 
-  const router = useRouter();
   const pathname = usePathname();
 
   const handlePageChange = (newPage) => {
@@ -38,7 +38,7 @@ const PaginatedTable = ({ headers, api, apidelete, keys }) => {
       setCurrentPage(newPage);
     }
   };
-
+  console.log(refresh);
   useEffect(() => {
     const getdata = async (page) => {
       try {
@@ -61,6 +61,7 @@ const PaginatedTable = ({ headers, api, apidelete, keys }) => {
       const res = await instance.delete(`${apidelete}/${id}`);
       setdata((prevData) => prevData.filter((item) => item.id !== id));
       setrefresh((prev) => !prev);
+      throw res;
     } catch (err) {
       console.log(err);
     }

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -9,8 +8,8 @@ import { Usevariables } from "@/app/context/VariablesProvider";
 const TestimonialComponent = () => {
   const { language } = Usevariables();
   // تمرير المتغير language كخاصية للمكون
-  const [testimonials, setTestimonials] = useState < any > [];
-  const [selectedTestimonial, setSelectedTestimonial] = useState < any > null;
+  const [testimonials, setTestimonials] = useState([]);
+  const [selectedTestimonial, setSelectedTestimonial] = useState(null);
   const [formData, setFormData] = useState({
     client_name: "",
     image: null,
@@ -19,8 +18,7 @@ const TestimonialComponent = () => {
   const [isEditMode, setIsEditMode] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [deleteConfirmId, setDeleteConfirmId] =
-    (useState < number) | (null > null);
+  const [deleteConfirmId, setDeleteConfirmId] = useState(null);
 
   // تحميل الآراء من API عند تحميل المكون
   useEffect(() => {

@@ -8,7 +8,7 @@ import { FaPlusCircle } from "react-icons/fa";
 
 export default function AddService() {
   const { language } = Usevariables();
-  const openinput = useRef<HTMLInputElement>(null);
+  // const openinput = useRef<HTMLInputElement>(null);
   const openinput_2 = useRef<HTMLInputElement>(null);
   const [features, setFeatures] = useState<string[]>([]);
   const [feature, setFeature] = useState<string>("");

@@ -4,7 +4,7 @@
 import Img from "@/app/_componants/Image";
 import { instance } from "@/app/Api/axios";
 import { Usevariables } from "@/app/context/VariablesProvider";
-import Link from "next/link";
+// import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { FaPlusCircle, FaTrash } from "react-icons/fa";
 

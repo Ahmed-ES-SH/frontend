@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -23,6 +24,7 @@ const BlogPost = ({ params }) => {
         setRelatedPosts(relatedResponse.data.data);
       } catch (err) {
         setError("حدث خطأ أثناء تحميل المقال.");
+        throw err;
       } finally {
         setLoading(false);
       }

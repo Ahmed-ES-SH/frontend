@@ -81,6 +81,7 @@ export default function AddSubService({ params }) {
       });
       setImages([]);
       seticon(null);
+      throw response;
     } catch (error: any) {
       if (error.response && error.response.status === 422) {
         setErrors(error.response.data.errors);

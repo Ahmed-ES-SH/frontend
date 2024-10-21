@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { Usevariables } from "../context/VariablesProvider"; // استدعاء اللغة من السياق
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 import ConfirmPopup from "../ConfirmPopup";
